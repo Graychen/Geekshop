@@ -1,0 +1,63 @@
+2015-02-03 04:20:58 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: E:\wamp2.5\wamp\www\tuan\frontend\web\views\site\login.php' in E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\wamp2.5\\wamp...', Array, Object(frontend\controllers\SiteController))
+#1 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#2 E:\wamp2.5\wamp\www\tuan\frontend\controllers\SiteController.php(90): yii\base\Controller->render('login', Array)
+#3 [internal function]: frontend\controllers\SiteController->actionLogin()
+#4 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#7 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/login', Array)
+#8 E:\wamp2.5\wamp\www\tuan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\wamp2.5\wamp\www\tuan\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2015-02-03 04:20:58 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'lang' => 'zh-cn'
+    'PHPSESSID' => '2l3s4ec9ej2dharjd7fiskju06'
+    '_csrf' => '40e1c3fd712b8de8de84c5929957ec379d0f7e44f5371f7d2e6428f0a70495dcs:32:\"YO_kbUl7ixeEow_t1skUduaFoRkW3cmF\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => 'lang=zh-cn; PHPSESSID=2l3s4ec9ej2dharjd7fiskju06; _csrf=40e1c3fd712b8de8de84c5929957ec379d0f7e44f5371f7d2e6428f0a70495dcs%3A32%3A%22YO_kbUl7ixeEow_t1skUduaFoRkW3cmF%22%3B'
+    'PATH' => 'E:\\java\\bin;E:\\java\\jre\\bin;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svn\\bin;E:\\wamp2.5\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/wamp2.5/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/wamp2.5/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'E:/wamp2.5/wamp/www/tuan/frontend/web/index.php'
+    'REMOTE_PORT' => '50155'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tuan/frontend/web/index.php/site/login'
+    'SCRIPT_NAME' => '/tuan/frontend/web/index.php'
+    'PATH_INFO' => '/site/login'
+    'PATH_TRANSLATED' => 'E:\\wamp2.5\\wamp\\www\\site\\login'
+    'PHP_SELF' => '/tuan/frontend/web/index.php/site/login'
+    'REQUEST_TIME_FLOAT' => 1422933658.773
+    'REQUEST_TIME' => 1422933658
+]
