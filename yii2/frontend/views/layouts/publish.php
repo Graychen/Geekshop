@@ -35,12 +35,37 @@ PublishAsset::register($this);
           <a href="/project/action/my" class="publish-menu-avtar" title="返回项目管理"><img src="http://gongying.gostarting.com/images/noavatar.jpg" width="50" height="50" class="img-circle" alt="陈小样" /><span>陈小样</span></a>
 
          <!-- <a href="/publish/basic/id/95" class="publish-menu-item active " title="基本信息"><span class="fa fa-file-text-o"></span>基本信息<i class="fa fa-caret-left"></i><i class="fa fa-check-circle"></i><i class="fa fa-exclamation-circle"></i><i class="fa fa-lock"></i><i class="fa fa-unlock"></i></a>-->
-          <a href="<?php echo Url::toRoute('publish/index');?>" class="publish-menu-item active " title="基本信息"><span class="fa fa-file-text-o"></span>基本信息<i class="fa fa-caret-left"></i><i class="fa fa-check-circle"></i><i class="fa fa-exclamation-circle"></i><i class="fa fa-lock"></i><i class="fa fa-unlock"></i></a>
-          <a href="<?php echo Url::toRoute('publish/fund/id/100');?>" class="publish-menu-item incomplete" title="回报设置"><span class="fa fa-gift"></span>回报设置<i class="fa fa-caret-left"></i><i class="fa fa-check-circle"></i><i class="fa fa-exclamation-circle"></i><i class="fa fa-lock"></i><i class="fa fa-unlock"></i></a>
-
-          <a href="http://localhost/yii2/frontend/web/publish/content" class="publish-menu-item incomplete" title="项目内容"><span class="fa fa-pencil-square-o"></span>项目内容<i class="fa fa-caret-left"></i><i class="fa fa-check-circle"></i><i class="fa fa-exclamation-circle"></i><i class="fa fa-lock"></i><i class="fa fa-unlock"></i></a>
-
-          <a href="/yii2/frontend/web/publish/index" class="publish-menu-item incomplete" title="提交项目"><span class="fa fa-check-square-o"></span>提交项目<i class="fa fa-caret-left"></i><i class="fa fa-check-circle"></i><i class="fa fa-exclamation-circle"></i><i class="fa fa-lock"></i><i class="fa fa-unlock"></i></a>
+          <a id="index"  class="publish-menu-item active" title="基本信息">
+            <span class="fa fa-file-text-o"></span>基本信息
+            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <i class="fa fa-lock"></i>
+            <i class="fa fa-unlock"></i>
+          </a>
+          <a id="fund" class="publish-menu-item incomplete"  title="回报设置">
+            <span class="fa fa-gift"></span>回报设置
+            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <i class="fa fa-lock"></i>
+            <i class="fa fa-unlock"></i></a>
+          <a  id="content" class="publish-menu-item incomplete" title="项目内容">
+            <span class="fa fa-pencil-square-o"></span>项目内容
+            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <i class="fa fa-lock"></i>
+            <i class="fa fa-unlock"></i>
+          </a>
+          <a id="info" class="publish-menu-item incomplete" title="提交项目">
+            <span class="fa fa-check-square-o"></span>提交项目
+            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <i class="fa fa-lock"></i>
+            <i class="fa fa-unlock"></i>
+          </a>
                 </div>
             <!--<a href="/" class="publish-logo" title="返回首页"></a>-->
         </div>
@@ -57,4 +82,26 @@ PublishAsset::register($this);
     <?php $this->endBody() ?>
 </body>
 </html>
+<?= Html::jsFile('@web/js/jquery-1.11.0.min.js') ?>
+<script type="text/javascript">
+  $(function(){  
+    $("#index").click(function(){
+    location.href = "<?php echo Url::toRoute('publish/index');?>";//location.href实现客户端页面的跳转  
+
+    }) 
+    $("#fund").click(function(){
+    location.href = "<?php echo Url::toRoute('publish/fund');?>";//location.href实现客户端页面的跳转  
+   
+     $("#index").removeClass("publish-menu-item active");
+     //.addClass("publish-menu-item incomplete");
+     
+    }) 
+    $("#content").click(function(){
+    location.href = "<?php echo Url::toRoute('publish/content');?>";//location.href实现客户端页面的跳转  
+    })
+    $("#info").click(function(){
+    location.href = "<?php echo Url::toRoute('publish/info');?>";//location.href实现客户端页面的跳转  
+    })
+ });  
+</script>
 <?php $this->endPage() ?>

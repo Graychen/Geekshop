@@ -1,8 +1,9 @@
 
 <?php
-
+use yii\helpers\Html;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = '极客潮品——追求极致的美';
 ?>
 
 
@@ -586,8 +587,8 @@ $this->title = 'My Yii Application';
 <div class="homepage-btn-row">
     <div class="container">
         <div class="homepage-btn-inner">
-                        <a href="/register" class="homepage-btn">现在注册</a>
-                        <a href="/publish" class="homepage-btn">发起项目</a>
+                        <a href="<?php echo Url::toRoute('site/signup');?>" class="homepage-btn">现在注册</a>
+                        <a href="<?php echo Url::toRoute('publish/index');?>" class="homepage-btn">发起项目</a>
             <a href="/project" class="homepage-btn">查看项目</a>
         </div>
     </div>
