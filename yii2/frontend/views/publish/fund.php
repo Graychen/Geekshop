@@ -171,13 +171,4 @@ use yii\helpers\Html;
 <div class="new-reward-data-container"></div>
 
 
-<?= Html::jsFile('@web/js/jquery-1.11.0.min.js') ?>
-<script type="text/javascript">
-    //<!--
-    var fund_upload_url = "/publish/fundUpload/id/95";
-var fund_newform = "/publish/fundForm/id/95";
-var fund_deleteurl = "/publish/deleteFund/id/95";
 
-    //-->
-</script>
-<?= Html::jsFile('@web/js/fund.js') ?>

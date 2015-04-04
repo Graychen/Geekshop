@@ -129,7 +129,7 @@ use yii\helpers\Html;
 </div>
 <!--end[publish right part]-->
 
-<?= Html::jsFile('@web/js/jquery-1.11.0.min.js') ?>
+ <?= Html::jsFile('@web/js/jquery-1.11.0.min.js') ?>
 <script type="text/javascript">
     //<!--
     var content_upload_url = "/publish/contentUploadFile/id/95";
@@ -137,5 +137,5 @@ var content_uploadfrontcover_url = "/publish/uploadFrontCover/id/95";
 var video_upload_url = "/publish/uploadVideoUrl/id/95";
 var video_url = "";
 
-    //-->
+    //
 </script>

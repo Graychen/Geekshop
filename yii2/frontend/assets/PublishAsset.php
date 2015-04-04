@@ -22,9 +22,10 @@ class PublishAsset extends AssetBundle
         'css/style-publish.css',
         'css/gostarting.css',
         'css/info.css'
+        'css/autosave/style.css'
     ];
     public $js = [
-        'js/jquery-1.11.0.min.js',
+        /*'js/jquery-1.11.0.min.js',*/
         'js/bootstrap.min.js',
         'js/jquery-ui-1.10.4.custom.min.js',
         'js/jquery.iframe-transport.js',
@@ -38,6 +39,10 @@ class PublishAsset extends AssetBundle
         'js/content.js',
         'js/info.js',
         'js/publish.js',
+        'js/fund.js',
+        'js/autosave/jbin1.js',
+        'js/autosave/jquery-1.6.4.min.js',
+        'js/autosave/sisyphus.min.js',
     ];
     public $depends = [
       

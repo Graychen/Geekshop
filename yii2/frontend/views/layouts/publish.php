@@ -91,10 +91,10 @@ PublishAsset::register($this);
     }) 
     $("#fund").click(function(){
     location.href = "<?php echo Url::toRoute('publish/fund');?>";//location.href实现客户端页面的跳转  
-   
-     $("#index").removeClass("publish-menu-item active");
+   //alert($("#index").attr("class"));
+     //$("#index").removeClass("");
      //.addClass("publish-menu-item incomplete");
-     
+        
     }) 
     $("#content").click(function(){
     location.href = "<?php echo Url::toRoute('publish/content');?>";//location.href实现客户端页面的跳转  
