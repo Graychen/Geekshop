@@ -28,13 +28,13 @@ class ProjectReturn extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function rules()
+   /* public function rules()
     {
         return [
             [['id', 'project_id', 'money'], 'required'],
             [['id', 'project_id', 'money', 'number', 'postage', 'time', 'project_num'], 'integer']
         ];
-    }
+    }*/
 
     /**
      * @inheritdoc

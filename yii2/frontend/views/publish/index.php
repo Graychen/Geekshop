@@ -233,7 +233,6 @@ $this->title = '基本信息';
     //<!--
     var basic_upload_url = "/publish/uploadBasic/id/95";
 var basic_upload_delete = "/publish/deletepic/id/95";
-
     //-->
 </script>
 <?= Html::jsFile('@web/js/basic.js') ?>

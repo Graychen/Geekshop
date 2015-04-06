@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
+use yii\bootstrap\ActiveForm;
 ?>
 
 
@@ -15,7 +16,9 @@ use yii\helpers\Html;
                 <!--start[reward 1]-->
                     <div class="publish-reward-box" id="publish-reward-160">
                     <a data-url="/publish/deleteFund/id/95/sid/160" class="reward-remove-btn"></a>
-                        <form action="" method="POST" name="fundform&#x5B;&#x5D;" id="fundform&#x5B;&#x5D;"><input type="hidden" name="id" value="160">                            <h1 class="reward-title">回报 1</h1>
+                       <?php $form = ActiveForm::begin(['id' => 'publish-basic-form-1']); ?>
+                        <!-- <form action="" method="POST" name="fundform&#x5B;&#x5D;" id="fundform&#x5B;&#x5D;"> -->
+                        <input type="hidden" name="id" value="160">                            <h1 class="reward-title">回报 1</h1>
                             <div class="publish-fund-errors">
                                 <ul></ul>
                             </div>
@@ -23,7 +26,7 @@ use yii\helpers\Html;
                                 <p class="basic-form-lbl">金额</p>
                                 <div class="basic-form-ele">
                                     <label class="funding-time-inputs-lbl fund-ammout">
-                                    <input name="supportNumber" class="funding-time-inputs-lbl-fund-ammout" placeholder="&#x8BF7;&#x8F93;&#x5165;&#x91D1;&#x989D;" maxlength="7" data-digits="true" title="&#x8BF7;&#x8F93;&#x5165;&#x91D1;&#x989D;" data-highlight=".fund-backset-module-box&#x20;&gt;&#x20;h4" data-preview=".fund-backset-module-box&#x20;&gt;&#x20;h4&#x20;&gt;&#x20;span" data-default-text="0" type="text" value="">                                        <i class="fa fa-yen"></i>
+                                    <input name="money" class="funding-time-inputs-lbl-fund-ammout" placeholder="&#x8BF7;&#x8F93;&#x5165;&#x91D1;&#x989D;" maxlength="7" data-digits="true" title="&#x8BF7;&#x8F93;&#x5165;&#x91D1;&#x989D;" data-highlight=".fund-backset-module-box&#x20;&gt;&#x20;h4" data-preview=".fund-backset-module-box&#x20;&gt;&#x20;h4&#x20;&gt;&#x20;span" data-default-text="0" type="text" value="">                                        <i class="fa fa-yen"></i>
                                     </label>
                                     <div class="clear"></div>
                                 </div>
@@ -36,7 +39,7 @@ use yii\helpers\Html;
                                     <select name="isPlaces" class="basic-suctom-select&#x20;reward-limit-select" title="&#x8BF7;&#x9009;&#x62E9;&#x662F;&#x5426;&#x9650;&#x989D;"><option value="Yes">是</option>
 <option value="No" selected="selected">否</option></select>                                    </div>
                                     <div class="publish-fund-input-small">
-                                    <input name="places" class="basic-form-input&#x20;reward_limit_yes" maxlength="3" data-digits="true" placeholder="&#x8F93;&#x5165;&#x6570;&#x91CF;" title="&#x8BF7;&#x8F93;&#x5165;&#x9650;&#x989D;&#x4E2A;&#x6570;" data-default-text="0" data-preview=".fund-backset-module-box&#x20;&gt;&#x20;h5&#x20;&gt;&#x20;.left-reward&#x20;&gt;&#x20;span" data-highlight=".fund-backset-module-box&#x20;&gt;&#x20;h5&#x20;&gt;&#x20;.left-reward" style="display&#x3A;none" type="text" value="">                                    </div>
+                                    <input name="number" class="basic-form-input&#x20;reward_limit_yes" maxlength="3" data-digits="true" placeholder="&#x8F93;&#x5165;&#x6570;&#x91CF;" title="&#x8BF7;&#x8F93;&#x5165;&#x9650;&#x989D;&#x4E2A;&#x6570;" data-default-text="0" data-preview=".fund-backset-module-box&#x20;&gt;&#x20;h5&#x20;&gt;&#x20;.left-reward&#x20;&gt;&#x20;span" data-highlight=".fund-backset-module-box&#x20;&gt;&#x20;h5&#x20;&gt;&#x20;.left-reward" style="display&#x3A;none" type="text" value="">                                    </div>
                                     <div class="clear"></div>
                                 </div>
                                 <div class="clear"></div>
@@ -90,7 +93,7 @@ use yii\helpers\Html;
                                 <p class="basic-form-lbl">是否包邮</p>
                                 <div class="basic-form-ele">
                                     <div class="publish-fund-input-small">
-                                    <select name="isFare" class="basic-suctom-select&#x20;shipping-fee-select" title="&#x8BF7;&#x9009;&#x62E9;&#x662F;&#x5426;&#x5305;&#x90AE;"><option value="Yes" selected="selected">是</option>
+                                    <select name="postage" class="basic-suctom-select&#x20;shipping-fee-select" title="&#x8BF7;&#x9009;&#x62E9;&#x662F;&#x5426;&#x5305;&#x90AE;"><option value="Yes" selected="selected">是</option>
 <option value="No">否</option></select>                                    </div>
                                     <div class="publish-fund-input-small">
                                         <input name="fare" placeholder="&#x8F93;&#x5165;&#x8FD0;&#x8D39;" class="basic-form-input&#x20;&#x20;reward_shipping_fee_amount" maxlength="5" data-digits="true" title="&#x8BF7;&#x8F93;&#x5165;&#x8FD0;&#x8D39;" data-default-text="0" data-preview=".shippin-fee-amnt&#x20;&gt;&#x20;b" data-highlight=".shippin-fee-amnt" style="display&#x3A;none" type="text" value="">                                    </div>
@@ -106,7 +109,7 @@ use yii\helpers\Html;
                                         <div class="funding-time-inputs" style="display: block;">
                                             <p style="margin-left: 0;">成功后</p>
                                             <label class="funding-time-inputs-lbl relative">
-                                                <input name="backDate" class="delivery_time_days" placeholder="&#x591A;&#x5C11;" data-digits="true" maxlength="3" title="&#x8BF7;&#x8F93;&#x5165;&#x5929;&#x6570;" data-default-text="0" data-preview=".after-success-days&#x20;&gt;&#x20;b" data-highlight=".after-success-days" type="text" value="">                                                <i class="fa fa-clock-o"></i>
+                                                <input name="time" class="delivery_time_days" placeholder="&#x591A;&#x5C11;" data-digits="true" maxlength="3" title="&#x8BF7;&#x8F93;&#x5165;&#x5929;&#x6570;" data-default-text="0" data-preview=".after-success-days&#x20;&gt;&#x20;b" data-highlight=".after-success-days" type="text" value="">                                                <i class="fa fa-clock-o"></i>
                                             </label>
                                             <p>天</p>
                                             <div class="clear"></div>
@@ -114,6 +117,7 @@ use yii\helpers\Html;
                                     </div>
                                 </div>
                             </div>
+                              <?= Html::submitButton('提交', ['class' => 'btn btn-default btn-lg btn-s']) ?>
                         </form>                    </div>
                     <!--start[reward 1]-->
 

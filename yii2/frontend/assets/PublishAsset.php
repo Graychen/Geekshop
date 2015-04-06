@@ -21,7 +21,7 @@ class PublishAsset extends AssetBundle
         'css/style-base.css',
         'css/style-publish.css',
         'css/gostarting.css',
-        'css/info.css'
+        'css/info.css',
         'css/autosave/style.css'
     ];
     public $js = [
