@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
+use yii\bootstrap\ActiveForm;
 ?>
 <!--start[publish leftmenu]-->
 
@@ -14,7 +15,8 @@ use yii\helpers\Html;
                 <div class="publish-basic-left-inner">
                     <!--start[left part]-->
                     <div class="publish-design-bg-content-highlight">
-                                         <form method="POST">
+                    <?php $form = ActiveForm::begin(['id' => 'publish-basic-form-1']); ?>
+                                      <!--    <form method="POST"> -->
                         <!-- form name="publish_basic_form_1" id="publish-basic-form-1" method="post" -->
                         <div class="upload-section upload-section-step with-show">
                             <a class="step-1-image"><i class="fa fa-picture-o"></i>上传封面图片</a>
@@ -80,7 +82,10 @@ use yii\helpers\Html;
                             </div>
 
                         <!--End [ editor place ]-->
-                        </form>                                                </div>
+                       <?= Html::submitButton('提交', ['class' => 'btn btn-default btn-lg btn-s']) ?>
+                                                
+                     <?php ActiveForm::end(); ?>  
+                     <!--    </form>      -->                                           </div>
 
                         <a class="editor-add-button"><i class="fa fa-plus-circle"></i>添加新的内容</a>
 <!-- form -->

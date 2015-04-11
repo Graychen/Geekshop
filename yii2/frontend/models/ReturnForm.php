@@ -23,7 +23,7 @@ class ReturnForm extends Model
    public $postage;
    public $time;
    public $project_num;
-   
+   public $support_content;
    
 
     /**
@@ -33,7 +33,7 @@ class ReturnForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['money', 'number', 'postage','time','project_num'], 'required'],
+            [['money'], 'required'],
             
         ];
     }
@@ -41,33 +41,36 @@ class ReturnForm extends Model
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
+  /*  public function attributeLabels()
     {
         return [
             'verifyCode' => 'Verification Code',
         ];
-    }
+    }*/
 
 
 
 
     public function setReturn()
     {
-          if ($this->validate()) {
             $return = new ProjectReturn();
-           
-            $return->money         =   "1";
-            $return->number        =  "1";
-            $return->postage       =   "1";
-            $return->time          =   "1";
-            $return->project_num   =   "1";
+            echo $this->project_num;
+            echo $this->support_content;
+            //$return->money             =   $this->money;
+          if ($this->validate()) {
+            var_dump($this->supportContent);
+            $return->number            =    $this->number;
+            $return->postage           =    $this->postage;
+            $return->time              =    $this->time;
+            $return->project_num       =    $this->project_num;
+            $return->support_content   =    $this->support_content;
        
             if ($return->save(false)) {
                 return $return;
             }
         }
 
-        return null;
+        return $this->support_content;
     }
 
 

@@ -49,6 +49,7 @@ class ProjectReturn extends \yii\db\ActiveRecord
             'postage' => 'Postage',
             'time' => 'Time',
             'project_num' => 'Project Num',
+            'project_content' => 'Project Content',
         ];
     }
 }

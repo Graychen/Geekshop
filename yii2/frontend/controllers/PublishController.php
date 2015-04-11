@@ -3,7 +3,8 @@
 namespace frontend\controllers;
 
 use common\models\tables\Project;
-use frontend\models\ReturnForm;
+use frontend\models\BasicInformationForm;
+use frontend\models\ContentForm;
 use Yii;
 use yii\web\Controller;
 
@@ -29,10 +30,10 @@ class PublishController extends Controller
 
     public function actionFund()
     {
-         $model = new ReturnForm();
-         $model->load(Yii::$app->request->post());
-         $return = $model->setReturn();
-        var_dump($return);
+         $returnModel = new ReturnForm();
+         var_dump((Yii::$app->request->post()));
+         var_dump($returnModel->load(Yii::$app->request->post()));
+         $return = $returnModel->setReturn();
         /* $return = $model->setReturn();
          var_dump($return);*/
        /* if ($model->load(Yii::$app->request->post())) {
@@ -43,13 +44,19 @@ class PublishController extends Controller
 
 
     	  return $this->render('fund', [
-            'model' => $model,
+            'model' => $returnModel,
         ]);
     }
 
     public function actionContent()
     {
-    	return $this->render('content');
+       $model = new ContentForm();
+        if ($model->load(Yii::$app->request->post())) {
+           if($content = $model->setContent()) {
+                 return $this->goBack();
+            }
+        }  
+    	return $this->render('content',['model'=>$model]);
     }
 
     public function actionInfo()
