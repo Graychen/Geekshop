@@ -11,7 +11,7 @@ use yii\web\Controller;
 class PublishController extends Controller
 {
 
-	//public $layout  = 'publish';
+	public $layout  = 'publish';
     public function actionIndex()
     {
          $model = new BasicInformationForm();
@@ -78,6 +78,6 @@ class PublishController extends Controller
     }
 
     public function actionTest(){
-        $this->render();
+        return $this->render('test');
     }
 }

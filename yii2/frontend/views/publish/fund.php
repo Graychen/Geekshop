@@ -55,7 +55,7 @@ use yii\bootstrap\ActiveForm;
 
                             <div class="publish-basic-formrow">
                                 <p class="basic-form-lbl no-padding">回报图片</p>
-                                <div class="basic-form-ele">
+                                <div class="basic-form-ele">    
                                                                     <div class="reward-img-box">
                                     <label class="reward-image-lbl" >
                                     <input type="file" name="files[]" class="reward-file-upload upload-1" title="请上传回报图片">

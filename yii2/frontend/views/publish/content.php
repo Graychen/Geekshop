@@ -15,7 +15,7 @@ use yii\bootstrap\ActiveForm;
                 <div class="publish-basic-left-inner">
                     <!--start[left part]-->
                     <div class="publish-design-bg-content-highlight">
-                    <?php $form = ActiveForm::begin(['id' => 'publish-basic-form-1']); ?>
+                    <?php $form = ActiveForm::begin(['id' => 'gbin1form']); ?>
                                       <!--    <form method="POST"> -->
                         <!-- form name="publish_basic_form_1" id="publish-basic-form-1" method="post" -->
                         <div class="upload-section upload-section-step with-show">

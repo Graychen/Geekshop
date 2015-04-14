@@ -122,7 +122,7 @@ $this->title = '基本信息';
                         <p class="basic-form-lbl no-padding">项目简介</p>
                         <div class="basic-form-ele">
                             <label class="basic-short-blurb-lbl">
-                            <textarea name="BasicInformationForm[intro]" maxlength="140" class="basic-short-blurb-area" data-default-text="Description" placeholder="&#x8BF7;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4F60;&#x7684;&#x9879;&#x76EE;" data-preview=".basic-hover-container&#x20;&gt;&#x20;p" data-highlight=".basic-hover-container&#x20;&gt;&#x20;p" title="&#x8BF7;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4F60;&#x7684;&#x9879;&#x76EE;"></textarea>                                <p class="short-blurb-counter"><span class="current">140</span> / 140</p>
+                            <textarea id="text" name="BasicInformationForm[intro]" maxlength="140" class="basic-short-blurb-area" data-default-text="Description" placeholder="&#x8BF7;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4F60;&#x7684;&#x9879;&#x76EE;" data-preview=".basic-hover-container&#x20;&gt;&#x20;p" data-highlight=".basic-hover-container&#x20;&gt;&#x20;p" title="&#x8BF7;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4F60;&#x7684;&#x9879;&#x76EE;"></textarea>                                <p class="short-blurb-counter"><span class="current">140</span> / 140</p>
                             </label>
                         </div>
                      </div>
@@ -234,5 +234,11 @@ $this->title = '基本信息';
     var basic_upload_url = "/publish/uploadBasic/id/95";
 var basic_upload_delete = "/publish/deletepic/id/95";
     //-->
+    $(function($) {
+        $('#text').autosave({
+        'interval': 20000,
+        'unique': 'articleadd'
+        });
+});
 </script>
 <?= Html::jsFile('@web/js/basic.js') ?>
